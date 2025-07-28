@@ -1,0 +1,106 @@
+# InterWeave IDE - Wine Setup .gitignore
+
+# Workspace directories (user-specific)
+workspace/
+**/workspace/
+*.metadata/
+.metadata/
+
+# Wine-specific files and directories
+.wine/
+*.wine/
+wine_prefix/
+
+# Temporary and cache files
+*.tmp
+*.temp
+*~
+*.bak
+*.backup
+*.orig
+
+# Log files
+*.log
+logs/
+Logs/
+
+# IDE-specific temporary files
+.eclipse/
+.settings/
+*.launch
+*.classpath
+*.project
+
+# JVM crash logs
+hs_err_*.log
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Archive files (usually not needed in repo)
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# Large binary files that shouldn't be in repo
+*.exe.bak
+*.dll.bak
+
+# User-specific configuration files
+user.ini
+user.properties
+*.user
+
+# Build artifacts
+build/
+target/
+bin/
+out/
+
+# IDE plugins (unless specifically needed)
+dropins/
+plugins/temp/
+
+# p2 provisioning
+p2/
+artifacts.xml
+content.xml
+
+# Update sites cache
+*.updateSite/
+
+# Configuration backups
+config/org.eclipse.core.runtime/
+config/org.eclipse.equinox.app/
+config/org.eclipse.osgi/
+
+# JRE logs and configuration
+jre/lib/ext/
+jre/lib/security/
+jre/bin/server/
+jre/bin/client/
+
+# Wine registry files
+*.reg.bak
+user.reg.bak
+system.reg.bak
+
+# Wine debug output
+wine_debug.log
+winedebug.txt
+
+# Local environment configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
