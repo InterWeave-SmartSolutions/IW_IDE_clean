@@ -11,6 +11,7 @@ The InterWeave IDE is a specialized development environment for working with Cre
 - [Troubleshooting](#troubleshooting)
 - [Project Structure](#project-structure)
 - [Wine Configuration](#wine-configuration)
+- [Git LFS Information](#git-lfs-information)
 - [Known Issues](#known-issues)
 
 ## Prerequisites
@@ -349,6 +350,49 @@ For Creatio BPM development:
    - Create new Creatio package
    - Set up package structure
    - Configure build settings
+
+## Git LFS Information
+
+This repository uses **Git Large File Storage (LFS)** to efficiently handle large binary files. LFS provides several benefits:
+
+### Benefits
+- **Faster Clones**: Repository downloads are much faster (~728KB vs 49MB)
+- **Better Performance**: Git operations remain fast
+- **Large File Support**: Handles files up to 2GB (vs 100MB Git limit)
+- **Automatic Handling**: LFS files are downloaded transparently
+
+### Files Tracked by LFS
+- **JAR files**: Java archives including the large rt.jar (~61MB)
+- **ZIP files**: Plugin archives and IDE tools
+- **PDF files**: Documentation and user guides
+- **EXE files**: IDE executable and Windows binaries
+- **DLL files**: Windows dynamic libraries
+
+### User Experience
+```bash
+# Cloning works exactly the same
+git clone https://github.com/InterWeave-SmartSolutions/IW_IDE_clean.git
+
+# Large files are automatically downloaded
+# No special commands needed!
+```
+
+### For Contributors
+If you plan to add large files:
+
+```bash
+# Install Git LFS (one time setup)
+sudo apt install git-lfs
+git lfs install
+
+# Check what's tracked
+git lfs track
+
+# Add new file types if needed
+git lfs track "*.newextension"
+```
+
+**📋 For complete LFS documentation, see [`GIT_LFS_SETUP.md`](GIT_LFS_SETUP.md)**
 
 ## Known Issues
 
